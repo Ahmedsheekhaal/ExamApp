@@ -1,6 +1,7 @@
 const contect = {
     data() {
         return {
+            input: '',
             studentName: '',
             marks: '',
 
@@ -22,6 +23,9 @@ const contect = {
             this.studentName = '';
             this.marks = "";
 
+        },
+        search() {
+            this.listAry = this.listAry.filter(name => name.studentName.match(this.input));
         }
     }
 }
